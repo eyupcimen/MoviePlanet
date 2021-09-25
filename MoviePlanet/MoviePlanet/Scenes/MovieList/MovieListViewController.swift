@@ -51,7 +51,7 @@ class MovieListViewController: UIViewController, MovieListDisplayLogic {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
+        if segue.identifier != nil {
             if let router = router {
                 let sender = sender as! [String:Any]
                 router.routeToShowMovieDetail(segue: segue,movieId: sender["movieId"] as! Int )
@@ -59,24 +59,16 @@ class MovieListViewController: UIViewController, MovieListDisplayLogic {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
         setUpUI()
         fetchData()
     }
     
     fileprivate func setUpUI() {
         title = "Movie Planet"
-        setUpTableView()
-        setUpSearchView()
-    }
-        
-    fileprivate func setUpTableView() {
-        sTableView.register(SearchTableCell.self)
         sTableView.isHidden = true
-    }
-   
-    fileprivate func setUpSearchView() {
+        sTableView.register(SearchTableCell.self)
         mSearchBar.placeholder = "Search"
         mTableView.register(MovieTableCell.self)
     }

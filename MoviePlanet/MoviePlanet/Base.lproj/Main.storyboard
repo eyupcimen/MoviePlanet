@@ -12,7 +12,7 @@
         <!--Movie List View Controller-->
         <scene sceneID="AiX-2q-Wd7">
             <objects>
-                <viewController id="z6X-Sa-tyI" customClass="MovieListViewController" customModule="MoviePlanet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieListViewController" id="z6X-Sa-tyI" customClass="MovieListViewController" customModule="MoviePlanet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8rn-jC-j6j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +100,7 @@
         <!--Movie Detail View Controller-->
         <scene sceneID="EdZ-73-MgZ">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="Oo6-id-6be" customClass="MovieDetailViewController" customModule="MoviePlanet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailViewController" id="Oo6-id-6be" customClass="MovieDetailViewController" customModule="MoviePlanet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xeS-7z-ikc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

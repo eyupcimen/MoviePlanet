@@ -60,13 +60,9 @@ class MovieDetailViewController: UIViewController, MovieDetailDisplayLogic {
         }
     }
     
-    override func viewDidLoad(){
-        super.viewDidLoad()
-        setUpUI()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setUpUI()
         fetchData()
     }
     

@@ -42,7 +42,6 @@ public struct Movie : Codable {
         }
     }
     
-    
     enum CodingKeys: String, CodingKey {
         case Id = "id"
         case Title = "title"
@@ -69,4 +68,15 @@ public struct Movie : Codable {
         PosterPath = AppConst.imageUrl + (PosterPath ?? "")
     }
     
+    public init(dic : [String : Any]) {
+        
+        self.Id = dic["id"] as! Int
+        self.Title = dic["title"] as! String
+        self.ReleaseDate = dic["releaseDate"] as! String
+        self.Overview = dic["overview"] as! String
+        self.VoteAverage = dic["voteAverage"] as! Double
+        self.ImdbLink = dic["imdbLink"] as! String
+        self.BackdropPath = dic["backdropPath"] as! String
+        self.PosterPath = dic["posterPath"] as! String
+    }
 }
