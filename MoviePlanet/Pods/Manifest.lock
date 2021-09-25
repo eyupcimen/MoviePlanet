@@ -1,0 +1,20 @@
+PODS:
+  - ASProgressHud (1.0.5)
+  - lottie-ios (3.2.3)
+
+DEPENDENCIES:
+  - ASProgressHud
+  - lottie-ios
+
+SPEC REPOS:
+  trunk:
+    - ASProgressHud
+    - lottie-ios
+
+SPEC CHECKSUMS:
+  ASProgressHud: 170e18e72af3ffb28d36fd6e6d9caf998762ff58
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+
+PODFILE CHECKSUM: 6d799890e5f47266038ab98f20c634abac1bd23b
+
+COCOAPODS: 1.10.0

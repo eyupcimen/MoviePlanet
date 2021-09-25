@@ -1,0 +1,6 @@
+framework module Pods_MoviePlanet_MoviePlanetUITests {
+  umbrella header "Pods-MoviePlanet-MoviePlanetUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

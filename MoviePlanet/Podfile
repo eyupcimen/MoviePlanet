@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'MoviePlanet' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MoviePlanet
+
+pod 'lottie-ios'
+pod 'ASProgressHud'
+
+  target 'MoviePlanetTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'MoviePlanetUITests' do
+    # Pods for testing
+  end
+
+end
