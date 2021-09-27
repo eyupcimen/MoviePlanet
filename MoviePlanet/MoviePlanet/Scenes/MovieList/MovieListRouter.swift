@@ -26,19 +26,15 @@ class MovieListRouter: NSObject, MovieListRoutingLogic, MovieListDataPassing {
     var dataStore: MovieListDataStore?
     
     func routeToShowMovieDetail(segue: UIStoryboardSegue?, movieId :Int) {
-        
+
         if let segue = segue {
             let destinationVC = segue.destination as! MovieDetailViewController
             var destinationDS = destinationVC.router!.dataStore!
-            passDataToShowOrder(source: dataStore!, destination: &destinationDS,movieId: movieId)
+            passDataToShowMovieDetail(source: dataStore!, destination: &destinationDS,movieId: movieId)
         }
     }
     
-    func navigateToShowOrder(source: MovieListViewController , destination: MovieDetailViewController) {
-        source.show(destination, sender: nil)
-    }
-    
-    func passDataToShowOrder(source: MovieListDataStore , destination: inout MovieDetailDataStore, movieId :Int) {
-        destination.movieId = movieId
+    func passDataToShowMovieDetail(source: MovieListDataStore , destination: inout MovieDetailDataStore, movieId :Int) {
+        destination.movieId = source.movies
     }
 }

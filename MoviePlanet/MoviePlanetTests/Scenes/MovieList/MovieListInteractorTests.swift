@@ -67,7 +67,7 @@ class MovieListInteractorTests: XCTestCase {
 //        XCTAssertTrue(spy.presentUpcomingMoviesCalled, "fetchMovies(request:) should ask the presenter to format the result")
 //    }
     
-    func testFetchOrdersShouldAskMoviesWorkerToFetchMoviesAndPresenterToFormatResult() {
+    func testFetchMoviesShouldAskMoviesWorkerToFetchMoviesAndPresenterToFormatResult() {
         // Given
         let listMoviesPresentationLogicSpy = MovieListPresentationLogicSpy()
         sut.presenter = listMoviesPresentationLogicSpy

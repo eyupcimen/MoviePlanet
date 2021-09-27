@@ -86,13 +86,13 @@ class MovieListViewControllerTests: XCTestCase {
     func testShouldFetchMoviesWhenViewDidAppear() {
         DispatchQueue.main.async {
             // Given
-            let listOrdersBusinessLogicSpy = MovieListBusinessLogicSpy()
-            self.sut.interactor = listOrdersBusinessLogicSpy
+            let listMoviesBusinessLogicSpy = MovieListBusinessLogicSpy()
+            self.sut.interactor = listMoviesBusinessLogicSpy
             self.loadView()
             // When
             self.sut.viewDidAppear(true)
             // Then
-            XCTAssert(listOrdersBusinessLogicSpy.fetchUpcomingMoviesCalled, "Should fetch movies right after the view appears")
+            XCTAssert(listMoviesBusinessLogicSpy.fetchUpcomingMoviesCalled, "Should fetch movies right after the view appears")
         }
     }
     
@@ -134,7 +134,7 @@ class MovieListViewControllerTests: XCTestCase {
         }
     }
     
-    func testNumberOfRowsInAnySectionShouldEqaulNumberOfOrdersToDisplay() {
+    func testNumberOfRowsInAnySectionShouldEqaulNumberOfMoviesToDisplay() {
         DispatchQueue.main.async {
             // Given
             guard let tableView = self.sut.mTableView else {
